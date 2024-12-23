@@ -29,7 +29,7 @@ export function SofaDetails({ id }: { id: string }) {
   const [quantity, setQuantity] = useState(1);
   const [activeImage, setActiveImage] = useState(0);
   
-  const { addToCart, isCartOpen, setIsCartOpen, cartItems, removeFromCart } = useCart();
+  const { addToCart, isCartOpen, setIsCartOpen,} = useCart();
 
   useEffect(() => {
     async function fetchSofa() {

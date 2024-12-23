@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from "next/link"
 import Image from "next/image"
 import { formatPrice } from "@/lib/utils"
-import FeaturesSection from './FeaturesSec'
+
 
 interface Sofa {
   id: number
