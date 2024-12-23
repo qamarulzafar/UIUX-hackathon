@@ -40,7 +40,7 @@ export function SofaDetails({ id }: { id: string }) {
         }
         const data = await res.json();
         setSofa(data);
-      } catch (err) {
+      } catch  {
         setError("Failed to load sofa details. Please try again later.");
       } finally {
         setIsLoading(false);

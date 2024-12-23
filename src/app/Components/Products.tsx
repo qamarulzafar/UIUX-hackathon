@@ -33,7 +33,7 @@ export function Products() {
         setSofas(furnitureItems)
         
         // setSofas(data.products)
-      } catch (err) {
+      } catch{
         setError('Failed to load sofas. Please try again later.')
       } finally {
         setIsLoading(false)
