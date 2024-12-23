@@ -1,6 +1,9 @@
 import { SofaDetails } from "@/app/Components/SofaDetails"
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  return <SofaDetails id={params.id} />
+interface ProductPageProps {
+  params: { id: string }
 }
 
+export default function ProductPage({ params }: ProductPageProps) {
+  return <SofaDetails id={params.id} />
+}
