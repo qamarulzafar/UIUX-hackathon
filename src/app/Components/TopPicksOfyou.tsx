@@ -1,9 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
-import pic1 from '../../Images/TopPicks (1).png';
-import pic2 from '../../Images/TopPicks (2).png';
-import pic3 from '../../Images/TopPicks (3).png';
-import pic4 from '../../Images/TopPicks (4).png';
+import React from "react";
+import Image from "next/image";
+import pic1 from "../../Images/toppic.png";
+import pic2 from "../../Images/toppic2.png";
+import pic3 from "../../Images/toppic3.png";
+import pic4 from "../../Images/toppic4.png";
+import Link from "next/link";
 
 // Array of product data
 const products = [
@@ -33,39 +34,47 @@ const products = [
   },
 ];
 
-const TopPicksForYou = () => {
+// Define props type
+interface TopPicksForYouProps {
+  heading: string;
+  showParagraph?: boolean;
+}
+
+const TopPicksForYou: React.FC<TopPicksForYouProps> = ({ heading, showParagraph = true }) => {
   return (
     <div className="flex flex-col items-center justify-center py-10">
       {/* Header Section */}
       <div className="text-center">
-        <h1 className="text-3xl font-bold">Top Picks For You</h1>
-        <p className="font-sans text-zinc-400 mt-3 px-4">
-          Find a bright ideal to suit your taste with our great selection of suspension, floor, and table lights.
-        </p>
+        <h1 className="text-3xl font-bold">{heading}</h1>
+        {showParagraph && (
+          <p className="font-sans text-zinc-400 mt-3 px-4">
+            Find a bright ideal to suit your taste with our great selection of suspension, floor, and table lights.
+          </p>
+        )}
       </div>
 
       {/* Products Section */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 px-5 max-w-7xl">
         {products.map((product) => (
-          <div
-            key={product.id}
-            className=" bg-white p-4"
-          >
-            <Image
+          <div key={product.id} className="bg-white p-4">
+           <Link href='/Shop'>
+           <Image
               src={product.image}
               alt={product.title}
               width={300}
               height={200}
               className="mx-auto"
-            />
+            /></Link>
             <h2 className="mt-4 text-lg font-sans">{product.title}</h2>
             <p className="text-black font-bold font-sans my-3">{product.price}</p>
           </div>
         ))}
       </div>
+
+      {/* View More Button */}
       <div className="viewmore flex justify-center flex-col items-center mt-10">
-            <button className="mt-3">View More</button>
-            <div className="w-16 h-[1px] bg-black mt-2"></div>
+        <Link href='/Shop' className="mt-3">View More</Link>
+        <div className="w-16 h-[1px] bg-black mt-2"></div>
       </div>
     </div>
   );

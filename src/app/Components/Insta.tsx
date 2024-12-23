@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import bgimg from '../../Images/Rectangle 17.png';
+import bgimg from '../../Images/Rectangleinsta.png';
 
 const Insta = () => {
   return (

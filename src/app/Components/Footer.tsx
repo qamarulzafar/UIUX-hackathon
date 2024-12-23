@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-white py-10">
       <div className="container mx-auto px-4">
-        <div className="flex justify-center gap-24 flex-col lg:flex-row text-gray-600">
+        <div className="flex justify-center gap-20 md:gap-24 flex-col lg:flex-row text-gray-600">
           {/* Address Section */}
           <div className='flex justify-center items-center'>
             <p className="text-sm leading-6">
@@ -15,8 +15,8 @@ const Footer = () => {
           </div>
           {/* Links Section */}
           <div>
-            <h4 className="text-zinc-400  mb-10">Links</h4>
-            <ul className="space-y-6 text-black">
+            <h4 className="text-zinc-400 mb-5 md:mb-10">Links</h4>
+            <ul className="space-y-3 md:space-y-6 text-black">
               <li><a href="#" className="hover:text-zinc-700">Home</a></li>
               <li><a href="#" className="hover:text-zinc-700">Shop</a></li>
               <li><a href="#" className="hover:text-zinc-700">About</a></li>
@@ -25,8 +25,8 @@ const Footer = () => {
           </div>
           {/* Help Section */}
           <div>
-            <h4 className="text-zinc-400  mb-10">Help</h4>
-            <ul className="space-y-6 text-black">
+            <h4 className="text-zinc-400 mb-5 md:mb-10">Help</h4>
+            <ul className="space-y-3 md:space-y-6 text-black">
               <li><a href="#" className="hover:text-zinc-700">Payment Options</a></li>
               <li><a href="#" className="hover:text-zinc-700">Returns</a></li>
               <li><a href="#" className="hover:text-zinc-700">Privacy Policies</a></li>
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
           {/* Newsletter Section */}
           <div>
-            <h4 className="text-zinc-400  mb-10">Newsletter</h4>
+            <h4 className="text-zinc-400 mb-5 md:mb-10">Newsletter</h4>
             <form className="flex gap-2">
               <input
                 type="email"

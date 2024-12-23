@@ -4,9 +4,9 @@ import { FaRegClock } from 'react-icons/fa';
 import { AiOutlineCalendar } from 'react-icons/ai';
 import { StaticImageData } from 'next/image';
 
-import BlogImage1 from '../../Images/BlogImage (1).png';
-import BlogImage2 from '../../Images/BlogImage (2).png';
-import BlogImage3 from '../../Images/BlogImage (3).png';
+import BlogImage1 from '../../Images/BlogImage1.png';
+import BlogImage2 from '../../Images/BlogImage2.png';
+import BlogImage3 from '../../Images/BlogImage3.png';
 
 interface Blog {
   id: number;
@@ -49,9 +49,9 @@ const BlogSection: FC = () => {
           Find a bright idea to suit your taste with our great selection
         </p>
         <div className=" flex flex-wrap justify-center gap-4">
-          {blogs.map((blog) => (
+          {blogs.map((blog, index) => (
             <div
-              key={blog.id}
+              key={index}
               className=" w-80 rounded-lg overflow-hidden"
             >
               <Image
